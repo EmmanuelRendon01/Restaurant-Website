@@ -1,0 +1,252 @@
+:root{
+    /* Colores principales */
+    --rojo-intenso: #D32F2F;
+    --marron-oscuro: #5D4037;
+    --blanco-hueso: #FFF8E1;
+    --naranja-calido: #F57C00;
+    --amarillo-mostaza: #FBC02D;
+    --negro-carbon: #212121;
+
+    /* Fuentes */
+    --font-primary: 'Arial', sans-serif;
+
+    /* Tamaños */
+    --font-size-base: 16px;
+    --font-size-title: 2rem;
+    --font-size-subtitle: 1.25rem;
+}
+
+/* 1. Usa box-sizing más predecible */
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* 2. Elimina márgenes y paddings innecesarios  */
+body,
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote,
+dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* / 3. Mejora el rendering del texto / */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: system-ui, sans-serif;
+}
+
+/* / 4. Quita la decoración de enlaces / */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* / 5. Imágenes adaptables / */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* / 6. Formularios coherentes / */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* / 7. Elimina listas decorativas / */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* / 8. Mejora del scroll */ */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* ESTILOS GENERALES */
+
+/* h1, h2, h3, h4, h5, h6 */
+
+h1 {
+    font-size: var(--font-size-title);
+    font-family: Impact, sans-serif;
+}
+
+h2{
+    font-family: Impact, sans-serif;
+    font-size: var(--font-size-subtitle);
+}
+
+h3{
+    font-family: Impact, sans-serif;
+    font-size: var(--font-size-subtitle);
+}
+
+/* Párrafos */
+
+p{
+    font-size: var(--font-size-base);
+    font-family: Arial, sans-serif;
+}
+
+a{  
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    
+}
+
+/* NAV-BAR */
+
+/* BLOCK */
+
+.nav-bar{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+}
+
+/* ELEMENTS */
+.nav-list-opt{
+    list-style: none;
+}
+
+.nav-list-opt li{
+    display: inline-block;
+    margin: 0.2rem;
+}
+
+.nav-list-account{
+    list-style: none;
+    margin-right: 3rem;
+}
+
+.nav-list-account li{
+    display: inline-block;
+    margin: 0.2rem;
+}
+
+.nav-bar img{
+ width: 0;
+}
+
+
+/* PRODUCTS SECTION */
+
+/* BLOCK */
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(248, 247, 245);
+}
+
+.products{
+    margin-top: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color: white;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+    padding-left: 15vh;
+}
+
+/* ELEMENT */
+
+main h2{
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 30%;
+    padding: 3rem;
+}
+
+.product img{
+    width: 40%;
+    height: 15vh;
+}
+
+.product-price{
+    font-weight: bold;
+    color: var(--rojo-intenso);
+}
+
+.product-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.product-button{
+    width: 40%;
+    border-radius: 10px;
+    background-color: var(--naranja-calido);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product-button:hover{
+    background-color: var(--amarillo-mostaza);
+}
+
+/* FOOTER */
+/* BLOCK */
+footer{
+    background-color: rgb(248, 247, 245);
+}
+
+footer p{
+    padding-top: 3rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    main h2{
+        text-align: center;
+        margin-top: 18vh;
+    }
+
+    .products{
+        margin: 3vh;
+        gap: 5vh;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    .product{
+        padding: 0;
+        width: 20vh;
+    }
+
+    .product img{
+        height: 15vh;
+        width: 100%;
+    }
+    .product-button{
+        width: 60%;
+    }
+}
+
+
+
