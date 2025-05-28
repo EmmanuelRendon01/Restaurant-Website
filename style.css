@@ -210,18 +210,25 @@ main h2{
 }
 
 /* FOOTER */
+
 /* BLOCK */
 footer{
+    padding-top: 4vh;
     background-color: rgb(248, 247, 245);
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    padding-bottom: 5vh;
 }
 
-footer p{
-    padding-top: 3rem;
-    text-align: center;
+.contacto{
+    display: flex;
+    flex-direction: column;
 }
+
+
 
 @media (max-width: 768px) {
-
     main h2{
         text-align: center;
         margin-top: 18vh;
@@ -243,6 +250,7 @@ footer p{
         height: 15vh;
         width: 100%;
     }
+
     .product-button{
         width: 60%;
     }
