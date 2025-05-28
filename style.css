@@ -254,7 +254,23 @@ footer{
     .product-button{
         width: 60%;
     }
-}
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .contacto{
+        width: 40%;
+    }
+
+    footer .horarios{
+        width: 40%;
+    }
+
+    footer .redes-sociales{
+        width: 40%;
+    }
 
 
 
